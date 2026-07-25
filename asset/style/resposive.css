@@ -1,0 +1,27 @@
+@media (max-width: 600px) {
+    body {
+        padding: 0 5px;
+    }
+    nav{
+        min-height: 60px;
+    }
+    .nav-row {
+        display: none;
+    }
+
+    nav.hide-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .qr-heading {
+        text-align: left;
+    }
+}

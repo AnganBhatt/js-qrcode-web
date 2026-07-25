@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    width: 80%;
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+
+    flex-wrap: wrap;
+}
+
+ul li {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+/* ============mobile-menu=============== */
+.hamburger {
+    position: absolute;
+    color: #000;
+    border: none;
+    outline: none;
+    right: 20px;
+    padding: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.hamburger .btn-hamburger {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    width: 330px;
+    background-color: #525252;
+    min-height: 100vh;
+    left: -360px;
+    display: none;
+}
+
+.menu.active {
+    left: 0;
+}
+
+.menu .menu-list ul li {
+    list-style: none;
+    margin: 25px 0px 0px 15px;
+}
+
+.menu .menu-list ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+}
+
+.menu .menu-list ul li a:hover {
+    font-size: 30px;
+}
+
+.collaps-btn {
+    margin-top: 10px;
+    position: absolute;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    background-color: transparent;
+    color: #fff;
+    left: 90%;
+    cursor: pointer;
+}
+.collaps-btn:hover{
+    font-size: 35px;
+}
+
+/* ======================navbar css=========== */
+nav {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+
+.nav-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-row ul {
+    display: flex;
+
+}
+
+.nav-row ul li {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 4px;
+}
+
+.nav-row ul li a {
+    position: relative;
+    padding: 10px 25px;
+    display: inline-block;
+    color: black;
+    z-index: 1;
+}
+
+.nav-row ul li a::before {
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background-color: #000;
+    z-index: -1;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.nav-row ul li a:hover::before {
+    width: 100%;
+}
+
+.nav-row ul li a.active::before {
+    width: 100%;
+}
+
+.nav-row ul li a:hover {
+    color: #fff;
+    z-index: 2;
+}
+.nav-row ul li a.active {
+    color: #fff;
+    z-index: 2;
+}
+
+.nav-row .extra-style a {
+    font-size: 20px;
+    padding: 10px 25px;
+    position: relative;
+    color: blue;
+    outline: none;
+    border: 2px solid blue;
+    border-radius: 25px;
+    font-weight: 500;
+    display: inline-block;
+    z-index: 1;
+}
+
+.nav-row .extra-style a::before {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 100%;
+    background-color: blue;
+    border-radius: 25px;
+    z-index: -1;
+    transition: 0.3s ease;
+}
+
+.nav-row .extra-style a:hover:before {
+    width: 100%;
+}
+
+.nav-row .extra-style a:hover {
+    color: #fff;
+    z-index: 2;
+}
+
+/* =============qr-code -css==================== */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #f9f9f9;
+
+}
+
+.qr-heading {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.qr-heading h1 {
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.qr-heading p {
+    font-size: 16px;
+    color: #525252;
+    line-height: 150%;
+
+}
+
+.style-input {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.style-input input {
+    margin-top: 10px;
+    padding: 15px;
+    width: 80%;
+    border-radius: 10px;
+    border: 2px solid #000;
+    outline: none;
+
+}
+
+.qr-heading a {
+    color: #000;
+    display: inline-block;
+    text-align: left;
+}
