@@ -20,7 +20,9 @@
     .menu {
         display: block;
     }
-
+        .nav-row ul li a.active::before {
+    display: none;
+}
     .qr-heading {
         text-align: left;
     }
