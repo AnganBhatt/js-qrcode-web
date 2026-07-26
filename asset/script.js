@@ -54,3 +54,18 @@ about.addEventListener('click', function () {
     home.classList.remove('active');
 
 });
+
+// qrcode api
+const urlfield = document.querySelector('.input');
+const imgbox = document.querySelector('.qr-img');
+const btngerate = document.getElementById('generatecode');
+
+btngerate.addEventListener('click', ()=>{
+    let url = urlfield.value.trim();
+
+    if(url){
+        imgbox.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + url;
+    } else {
+        alert("please enter a link");
+    }
+})
